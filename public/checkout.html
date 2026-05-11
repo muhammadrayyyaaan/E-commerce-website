@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout · APEX ATHLETIC</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><span class="dot"></span>APEX</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Shop</a></li>
+      <li><a href="about.html">Story</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="icon-btn theme-toggle" data-theme-toggle aria-label="Toggle theme">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <a href="cart.html" class="icon-btn" aria-label="Cart">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="cart-count"></span>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <section class="page-head">
+    <div class="wrap">
+      <div class="crumbs"><a href="cart.html">Bag</a> / <span>Checkout</span></div>
+      <h1>Almost <em>There</em></h1>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="checkout-layout">
+      <form class="checkout-form" id="checkout-form" novalidate autocomplete="on">
+        <fieldset>
+          <legend><span class="num">1</span>Contact</legend>
+          <div class="form-grid">
+            <div class="field full">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required autocomplete="email">
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend><span class="num">2</span>Shipping</legend>
+          <div class="form-grid">
+            <div class="field"><label for="fname">First name</label><input id="fname" name="fname" required autocomplete="given-name"></div>
+            <div class="field"><label for="lname">Last name</label><input id="lname" name="lname" required autocomplete="family-name"></div>
+            <div class="field full"><label for="addr">Address</label><input id="addr" name="addr" required autocomplete="street-address"></div>
+            <div class="field"><label for="city">City</label><input id="city" name="city" required autocomplete="address-level2"></div>
+            <div class="field"><label for="zip">Postal code</label><input id="zip" name="zip" required autocomplete="postal-code"></div>
+            <div class="field"><label for="country">Country</label>
+              <select id="country" name="country" autocomplete="country-name">
+                <option>United States</option><option>Canada</option><option>United Kingdom</option><option>Germany</option><option>Maldives</option><option>Other</option>
+              </select>
+            </div>
+            <div class="field"><label for="phone">Phone</label><input type="tel" id="phone" name="phone" autocomplete="tel"></div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend><span class="num">3</span>Payment</legend>
+          <div class="payment-methods">
+            <label><input type="radio" name="pay" value="card" checked>Credit Card</label>
+            <label><input type="radio" name="pay" value="paypal">PayPal</label>
+            <label><input type="radio" name="pay" value="apple">Apple Pay</label>
+          </div>
+          <div class="form-grid" id="card-fields">
+            <div class="field full"><label for="card">Card number</label><input id="card" name="card" inputmode="numeric" placeholder="•••• •••• •••• ••••" autocomplete="cc-number"></div>
+            <div class="field"><label for="exp">Expiration</label><input id="exp" name="exp" placeholder="MM / YY" autocomplete="cc-exp"></div>
+            <div class="field"><label for="cvc">CVC</label><input id="cvc" name="cvc" inputmode="numeric" placeholder="•••" autocomplete="cc-csc"></div>
+          </div>
+        </fieldset>
+
+        <button type="submit" class="btn btn-accent btn-arrow" style="width:100%;justify-content:center;padding:20px;">Place Order</button>
+        <p style="margin-top:18px;font-size:12px;color:var(--ink-dim);text-align:center;">Your information is encrypted and secure. We never store payment details.</p>
+      </form>
+
+      <aside class="order-summary">
+        <h3>Your Order</h3>
+        <div id="order-lines"><!-- injected --></div>
+        <div style="margin-top:18px;">
+          <div class="summary-row"><span>Subtotal</span><span id="subtotal">$0</span></div>
+          <div class="summary-row"><span>Shipping</span><span id="shipping">FREE</span></div>
+          <div class="summary-row total"><span>Total</span><span id="total">$0</span></div>
+        </div>
+        <div class="brand-reminder">
+          You're not just placing an order. You're joining 180,000+ athletes who choose gear built to keep up. Welcome to the squad.
+        </div>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-bottom" style="padding-top:0;border:none;"><div>© 2026 APEX Athletic. Secure checkout.</div></div>
+  </div>
+</footer>
+
+<script src="shared.js"></script>
+<script src="checkout.js"></script>
+</body>
+</html>

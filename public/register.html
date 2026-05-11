@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign up · APEX</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo"><span class="dot"></span>APEX</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Shop</a></li>
+        <li><a href="about.html">Story</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+              <button class="icon-btn theme-toggle" data-theme-toggle aria-label="Toggle theme">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+
+              <a href="cart.html" class="icon-btn" aria-label="Cart">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="cart-count"></span>
+      </a>
+
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="wrap" style="max-width: 520px;">
+        <h1 style="margin-bottom: 8px;">Create account</h1>
+        <p style="margin-bottom: 32px; opacity: 0.7;">Join APEX and start shopping.</p>
+
+        <form class="checkout-form" id="register-form" novalidate>
+          <fieldset>
+            <legend><span class="num">+</span>Your Details</legend>
+            <div class="form-grid">
+              <div class="field full">
+                <label for="rname">Name</label>
+                <input type="text" id="rname" name="name" required>
+              </div>
+              <div class="field full">
+                <label for="remail">Email</label>
+                <input type="email" id="remail" name="email" required>
+              </div>
+              <div class="field full">
+                <label for="rpassword">Password (min 6 characters)</label>
+                <div style="position: relative;">
+  <input type="password" id="rpassword" name="password" required minlength="6" style="padding-right: 50px;">
+  <button type="button" onclick="togglePassword('rpassword', this)" style="position: absolute; right: 12px; top: 50%; transform: translateY(-50%); background: none; border: none; cursor: pointer; font-size: 18px;">👁</button>
+</div>
+              </div>
+            </div>
+            <p id="register-error" style="color: #ff4444; margin-top: 16px; display: none;"></p>
+            <button type="submit" class="btn btn-accent btn-arrow" style="margin-top: 24px;">Sign up</button>
+          </fieldset>
+        </form>
+
+        <p style="margin-top: 32px;">
+          Already have an account? <a href="login.html" style="text-decoration: underline;">Log in</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <script src="shared.js"></script>
+  <script src="register.js"></script>
+</body>
+</html>
