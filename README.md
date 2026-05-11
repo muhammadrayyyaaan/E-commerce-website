@@ -163,3 +163,5 @@ All endpoints return JSON.
 - Product data is stored in `public/shared.js`. This could be migrated to the database as a future improvement.
 - Session cookies last 7 days.
 - The application runs on port 3000 by default.
+# E-commerce-website
+Full stack e-commerce website for a college project
